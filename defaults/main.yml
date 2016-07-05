@@ -1,8 +1,4 @@
 ---
-passenger_server_name: www.example.com
-passenger_app_root: /opt/example/public
-passenger_app_env: production
-
 passenger_root: /usr/lib/ruby/vendor_ruby/phusion_passenger/locations.ini
 passenger_ruby: /usr/bin/ruby
 
@@ -10,3 +6,19 @@ nginx_worker_processes: "4"
 nginx_worker_connections: "768"
 nginx_keepalive_timeout: "65"
 nginx_remove_default_vhost: true
+nginx_vhosts_filename: "vhosts.conf"
+nginx_vhosts: []
+# Example vhost below, showing all available options:
+# - listen: "80 default_server" # default: "80 default_server"
+#   server_name: "example.com" # default: N/A
+#   root: "/var/www/example.com" # default: N/A
+#   index: "index.html index.htm" # default: "index.html index.htm"
+#
+#   # Properties that are only added if defined:
+#   passenger_enabled: on # default: N/A
+#   passenger_app_env: development # default: N/A
+#   passenger_user: nginx # default: N/A
+#   error_page: ""
+#   access_log: ""
+#   error_log: ""
+#   extra_parameters: "" # Can be used to add extra config blocks (multiline).
