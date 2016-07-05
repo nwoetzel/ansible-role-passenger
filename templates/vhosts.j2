@@ -31,11 +31,11 @@ server {
     {% endif %}
 
     {% if vhost.passenger_app_env is defined %}
-    passenger_app_env {{ passenger_app_env }};
+    passenger_app_env {{ vhost.passenger_app_env }};
     {% endif %}
 
     {% if vhost.passenger_user is defined %}
-    passenger_user {{ passenger_user }};
+    passenger_user {{ vhost.passenger_user }};
     {% endif %}
 
     {% if vhost.extra_parameters is defined %}
